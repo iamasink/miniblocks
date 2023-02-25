@@ -1,6 +1,16 @@
 {
 	"pack": {
-		"pack_format": 10,
-		"description": [{"text":"sex","color":"gold"}]
+		"pack_format": 12,
+		"description": [
+			{
+				"text": "mini blocks using the new entities <3",
+				"color": "#FF0080"
+			},
+			{
+				"text": " by Iamasink",
+				"bold": true,
+				"color": "#F9BECA"
+			}
+		]
 	}
 }
