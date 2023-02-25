@@ -45,4 +45,5 @@ execute positioned ~ ~ ~-0.001 run summon interaction ~0.03125 ~ ~0.03125 {width
 execute positioned ~ ~-0.001 ~ run summon interaction ~0.03125 ~ ~0.03125 {width:0.0625f,height:0.0625f,response:0b,Tags:["downinteraction","interaction"],attack:{timestamp:-1},interaction:{timestamp:-1}}
 
 # if something invalid was placed, kill it.
+execute as @e[type=minecraft:block_display,distance=..0.01,nbt={block_state:{Name:"minecraft:air"}}] at @s run playsound entity.villager.no master @a ~ ~ ~
 execute as @e[type=minecraft:block_display,distance=..0.01,nbt={block_state:{Name:"minecraft:air"}}] at @s run function miniblocks:kill
