@@ -1,0 +1,1 @@
+scoreboard objectives add miniblocks.rotation dummy
