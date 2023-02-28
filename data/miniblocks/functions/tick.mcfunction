@@ -8,7 +8,8 @@ execute as @e[tag=new] run tag @s remove new
 execute as @a store result score @s rotation run data get entity @s Rotation[0]
 
 # save held item to storage. todo- find a better way to do this that supports multiple players?
-execute as @e[type=player] run data modify storage miniblocks:miniblocks block set from entity @s SelectedItem.id
+# no longer needed im just stupid
+#execute as @e[type=player] run data modify storage miniblocks:miniblocks block set from entity @s SelectedItem.id
 #execute as @e[type=player] unless data entity @s SelectedItem.id run data modify storage miniblocks:miniblocks block set value stone
 
 # handle use interactions for every direction

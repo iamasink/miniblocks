@@ -4,8 +4,8 @@
 summon minecraft:block_display ~ ~ ~ {shadow_radius:0,width:1f,height:1f,block_state:{Name:"minecraft:stone"},Tags:["small"],view_range:0f}
 # modifies scale to be 1 pixel x 1 pixel (1/16th a block). for some reason this can't be done when summoning it but whatever
 execute as @e[type=minecraft:block_display,distance=..0.01] run data modify entity @s transformation.scale set value [0.0625f,0.0625f,0.0625f]
-# change the block state from storage
-execute as @e[type=minecraft:block_display,distance=..0.01] run data modify entity @s block_state.Name set from storage miniblocks:miniblocks block
+# change the block state from the player, @s is the player so we can't use as
+execute at @e[type=minecraft:block_display,distance=..0.01] run data modify entity @e[type=minecraft:block_display,distance=..0.01,limit=1] block_state.Name set from entity @s SelectedItem.id
 # substitute items that can be placed. todo- add others but im lazy
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:redstone"}}] as @e[type=minecraft:block_display,distance=..0.01] run data modify entity @s block_state.Name set value redstone_wire
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:beetroot_seeds"}}] as @e[type=minecraft:block_display,distance=..0.01] run data modify entity @s block_state.Name set value beetroots
