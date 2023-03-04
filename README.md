@@ -5,7 +5,7 @@ silly minecraft datapack using the new interaction and block display entities :3
 
 requires 1.19.4+
 
-it probably only works on singleplayer right now sorry ;-;  
+you should backup your world incase it gets fucked up (it shouldn't but you never know)
 
 run `/function miniblocks:grid` to spawn a plane of miniblocks where you're standing, with the block you're holding.  
 also you can do `/execute align xyz run function miniblocks:summon` to spawn a single mini block aligned to the corner  
