@@ -1,3 +1,4 @@
+tellraw @s [{"text":"<","color":"#ff3d00"},{"text":"M","color":"#ff3717"},{"text":"i","color":"#ff312e"},{"text":"n","color":"#ff2c45"},{"text":"i","color":"#ff265c"},{"text":"b","color":"#ff2173"},{"text":"l","color":"#ff1b8b"},{"text":"o","color":"#ff16a2"},{"text":"c","color":"#ff10b9"},{"text":"k","color":"#ff0bd0"},{"text":"s","color":"#ff05e7"},{"text":">","color":"#ff00ff"},{"text":" Generating grid... This may take a while","color":"#f9beca"}]
 # align to the corner
 execute align xyz run summon marker ~ ~ ~ {Tags:["spawner"]}
 
@@ -74,4 +75,5 @@ kill @e[tag=spawner]
 kill @e[tag=spawner2]
 kill @e[tag=spawner3]
 
-playsound entity.player.burp master @s ~ ~ ~
+playsound entity.experience_orb.pickup master @s ~ ~ ~
+tellraw @s [{"text":"<","color":"#ff3d00"},{"text":"M","color":"#ff3717"},{"text":"i","color":"#ff312e"},{"text":"n","color":"#ff2c45"},{"text":"i","color":"#ff265c"},{"text":"b","color":"#ff2173"},{"text":"l","color":"#ff1b8b"},{"text":"o","color":"#ff16a2"},{"text":"c","color":"#ff10b9"},{"text":"k","color":"#ff0bd0"},{"text":"s","color":"#ff05e7"},{"text":">","color":"#ff00ff"},{"text":" Done!","color":"#f9beca"}]

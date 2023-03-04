@@ -13,27 +13,27 @@ execute as @a store result score @s miniblocks.rotation run data get entity @s R
 #execute as @e[type=player] unless data entity @s SelectedItem.id run data modify storage miniblocks:miniblocks block set value stone
 
 # handle use interactions for every direction
-execute as @e[tag=miniblocks.eastinteraction] at @s on target positioned ~0.03125 ~ ~-0.03125 positioned ~-0.001 ~ ~ run function miniblocks:place
+execute as @e[tag=miniblocks.eastinteraction] at @s on target positioned ~0.03125 ~ ~-0.03125 positioned ~-0.001 ~ ~ run function miniblocks:placeeast
 execute as @e[tag=miniblocks.eastinteraction,tag=!miniblocks.new] at @s on target positioned ~ ~ ~ run summon interaction ~ ~ ~ {width:0.0625f,height:0.0625f,response:0b,Tags:["miniblocks.eastinteraction","miniblocks.interaction","miniblocks.new"],attack:{timestamp:-1},interaction:{timestamp:-1}}
 execute as @e[tag=miniblocks.eastinteraction,tag=!miniblocks.new] at @s on target positioned ~ ~ ~ run kill @e[tag=miniblocks.eastinteraction,tag=!miniblocks.new,distance=..0.001]
 
-execute as @e[tag=miniblocks.westinteraction] at @s on target positioned ~-0.09375 ~ ~-0.03125 positioned ~0.001 ~ ~ run function miniblocks:place
+execute as @e[tag=miniblocks.westinteraction] at @s on target positioned ~-0.09375 ~ ~-0.03125 positioned ~0.001 ~ ~ run function miniblocks:placewest
 execute as @e[tag=miniblocks.westinteraction,tag=!miniblocks.new] at @s on target positioned ~ ~ ~ run summon interaction ~ ~ ~ {width:0.0625f,height:0.0625f,response:0b,Tags:["miniblocks.westinteraction","miniblocks.interaction","miniblocks.new"],attack:{timestamp:-1},interaction:{timestamp:-1}}
 execute as @e[tag=miniblocks.westinteraction,tag=!miniblocks.new] at @s on target positioned ~ ~ ~ run kill @e[tag=miniblocks.westinteraction,tag=!miniblocks.new,distance=..0.001]
 
-execute as @e[tag=miniblocks.southinteraction] at @s on target positioned ~-0.03125 ~ ~0.03125 positioned ~ ~ ~-0.001 run function miniblocks:place
+execute as @e[tag=miniblocks.southinteraction] at @s on target positioned ~-0.03125 ~ ~0.03125 positioned ~ ~ ~-0.001 run function miniblocks:placesouth
 execute as @e[tag=miniblocks.southinteraction,tag=!miniblocks.new] at @s on target positioned ~ ~ ~ run summon interaction ~ ~ ~ {width:0.0625f,height:0.0625f,response:0b,Tags:["miniblocks.southinteraction","miniblocks.interaction","miniblocks.new"],attack:{timestamp:-1},interaction:{timestamp:-1}}
 execute as @e[tag=miniblocks.southinteraction,tag=!miniblocks.new] at @s on target positioned ~ ~ ~ run kill @e[tag=miniblocks.southinteraction,tag=!miniblocks.new,distance=..0.001]
 
-execute as @e[tag=miniblocks.northinteraction] at @s on target positioned ~-0.03125 ~ ~-0.09375 positioned ~ ~ ~0.001 run function miniblocks:place
+execute as @e[tag=miniblocks.northinteraction] at @s on target positioned ~-0.03125 ~ ~-0.09375 positioned ~ ~ ~0.001 run function miniblocks:placenorth
 execute as @e[tag=miniblocks.northinteraction,tag=!miniblocks.new] at @s on target positioned ~ ~ ~ run summon interaction ~ ~ ~ {width:0.0625f,height:0.0625f,response:0b,Tags:["miniblocks.northinteraction","miniblocks.interaction","miniblocks.new"],attack:{timestamp:-1},interaction:{timestamp:-1}}
 execute as @e[tag=miniblocks.northinteraction,tag=!miniblocks.new] at @s on target positioned ~ ~ ~ run kill @e[tag=miniblocks.northinteraction,tag=!miniblocks.new,distance=..0.001]
 
-execute as @e[tag=miniblocks.upinteraction] at @s on target positioned ~-0.03125 ~0.0625 ~-0.03125 positioned ~ ~-0.001 ~ run function miniblocks:place
+execute as @e[tag=miniblocks.upinteraction] at @s on target positioned ~-0.03125 ~0.0625 ~-0.03125 positioned ~ ~-0.001 ~ run function miniblocks:placeup
 execute as @e[tag=miniblocks.upinteraction,tag=!miniblocks.new] at @s on target positioned ~ ~ ~ run summon interaction ~ ~ ~ {width:0.0625f,height:0.0625f,response:0b,Tags:["miniblocks.upinteraction","miniblocks.interaction","miniblocks.new"],attack:{timestamp:-1},interaction:{timestamp:-1}}
 execute as @e[tag=miniblocks.upinteraction,tag=!miniblocks.new] at @s on target positioned ~ ~ ~ run kill @e[tag=miniblocks.upinteraction,tag=!miniblocks.new,distance=..0.001]
 
-execute as @e[tag=miniblocks.downinteraction] at @s on target positioned ~-0.03125 ~-0.0625 ~-0.03125 positioned ~ ~0.001 ~ run function miniblocks:place
+execute as @e[tag=miniblocks.downinteraction] at @s on target positioned ~-0.03125 ~-0.0625 ~-0.03125 positioned ~ ~0.001 ~ run function miniblocks:placedown
 execute as @e[tag=miniblocks.downinteraction,tag=!miniblocks.new] at @s on target positioned ~ ~ ~ run summon interaction ~ ~ ~ {width:0.0625f,height:0.0625f,response:0b,Tags:["miniblocks.downinteraction","miniblocks.interaction","miniblocks.new"],attack:{timestamp:-1},interaction:{timestamp:-1}}
 execute as @e[tag=miniblocks.downinteraction,tag=!miniblocks.new] at @s on target positioned ~ ~ ~ run kill @e[tag=miniblocks.downinteraction,tag=!miniblocks.new,distance=..0.001]
 
