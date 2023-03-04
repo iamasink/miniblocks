@@ -1,5 +1,8 @@
 # miniblocks
+
 silly minecraft datapack using the new interaction and block display entities :3  
+
+requires 1.19.4+
 
 it probably only works on singleplayer right now sorry ;-;  
 
