@@ -1,9 +1,10 @@
 #execute as @e[tag=miniblocks.miniblock] at @s run summon interaction ~0.03125 ~ ~0.03125 {width:0.0625f,height:0.0625f,response:0b,Tags:["breakinteraction"],attack:{timestamp:-1},interaction:{timestamp:-1}}
-# summons block display. view range is 0 so it is invisible until it's changed later.
-summon minecraft:block_display ~ ~ ~ {shadow_radius:0,width:1f,height:1f,block_state:{Name:"minecraft:stone"},Tags:["miniblocks.miniblock"],view_range:0f}
+# summons block display. https://bugs.mojang.com/browse/MC-259838.
+# the block_state as stone is used if the executor isn't a player
+summon minecraft:block_display ~ ~ ~ {shadow_radius:0,width:1f,height:1f,block_state:{Name:"minecraft:stone"},Tags:["miniblocks.miniblock"],transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[0.0625f,0.0625f,0.0625f],right_rotation:[0f,0f,0f,1f]},view_range:0f}
 
 # modifies scale to be 1 pixel x 1 pixel (1/16th a block). for some reason this can't be done when summoning it but whatever
-execute as @e[type=minecraft:block_display,limit=1,sort=nearest] run data modify entity @s transformation.scale set value [0.0625f,0.0625f,0.0625f]
+# execute as @e[type=minecraft:block_display,limit=1,sort=nearest] run data modify entity @s transformation.scale set value [0.0625f,0.0625f,0.0625f]
 # change the block state from the player, @s is the player so we can't use execute as
 execute at @e[type=minecraft:block_display,limit=1,sort=nearest] run data modify entity @e[type=minecraft:block_display,limit=1,sort=nearest] block_state.Name set from entity @s SelectedItem.id
 # substitute items that can be placed. todo- add others but im lazy
