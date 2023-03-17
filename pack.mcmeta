@@ -3,11 +3,16 @@
 		"pack_format": 12,
 		"description": [
 			{
-				"text": "mini blocks using the new entities <3",
+				"text": "mini blocks <3",
 				"color": "#FF0080"
 			},
 			{
-				"text": " by Iamasink",
+				"text": " v0.4.0",
+				"bold": false,
+				"color": "#007acc"
+			},
+			{
+				"text": "\nby Iamasink",
 				"bold": true,
 				"color": "#F9BECA"
 			}
