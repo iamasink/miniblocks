@@ -13,6 +13,10 @@ also you can do `/execute align xyz run function miniblocks:summon` to spawn a s
 you can only place other mini blocks by clicking on another  
 everything else should be self explanatory  
 
+# how to install
+1. download latest .zip from [Releases](https://github.com/iamasink/miniblocks/releases)
+2. put the .zip in your world's datapacks folder. There is no need to unzip it.
+
 # things i might add
 
 
@@ -40,3 +44,6 @@ everything else should be self explanatory
 
 # demo
 https://youtu.be/GIXlmhbBgm4
+
+
+
