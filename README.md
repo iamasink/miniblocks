@@ -3,12 +3,12 @@ https://github.com/iamasink/miniblocks
 
 silly minecraft datapack using the new interaction and block display entities :3  
 
-requires 1.19.4+
-
-you should backup your world incase it gets fucked up (it shouldn't but you never know)
+requires 1.21.4+
+I'd suggest you backup your world because maybe something will break (it shouldn't but its good practice!)
 
 run `/function miniblocks:grid` to spawn a plane of miniblocks where you're standing, with the block you're holding.  
 also you can do `/execute align xyz run function miniblocks:summon` to spawn a single mini block aligned to the corner  
+there is also `/function miniblocks:player-mini` and `/function miniblocks:player-normal` to resize yourself and revert to normal respectively
 
 you can only place other mini blocks by clicking on another  
 everything else should be self explanatory  
