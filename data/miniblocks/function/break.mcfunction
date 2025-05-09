@@ -7,6 +7,8 @@ execute as @e[tag=miniblocks.miniblock,limit=1,sort=nearest] run particle minecr
 
 # particle minecraft:block_crumble{block_state:{Name:"minecraft:stone"}}
 
+playsound minecraft:block.stone.break block @a ~ ~ ~ 1 1.1
+
 # same as kill.mcfunction:
 # offset for the block display, otherwise it may find the wrong one!
 # because its origin position is slightly different, at the northwest corner instead of the centre like interactions
